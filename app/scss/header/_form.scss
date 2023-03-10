@@ -1,0 +1,37 @@
+form {
+    display: flex;
+    align-items: center;
+    background-color: $color-search;
+    padding: 6px;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+    margin: 0;
+    .barre {
+        label {
+            display: none;
+        }
+
+        input[type="search"] {
+            flex: 1;
+            width: 500px;
+            border: none;
+            font-size: 14px;
+            background-color: $color-search;
+            outline: none;
+
+            &::placeholder {
+                color: $color-placeholder;
+                padding-left: 8px;
+            }
+        }
+    }
+
+    button[type="submit"] {
+        border: none;
+        background-color: transparent;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+}
