@@ -1,103 +1,75 @@
 header {
-    background: linear-gradient($grad-lin-hf);
-    box-shadow: 0px 4px 4px $color-shadow;
-    list-style: none;
-    height: 6rem;
-    justify-content: center;
+  background: linear-gradient($grad-lin-hf);
+  box-shadow: 0px 4px 4px $color-shadow;
+  list-style: none;
+  height: 6rem;
+  justify-content: center;
 
-    #bandeau {
+  #bandeau {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #bandeau {
+    display: flex;
+
+    .head {
+      height: 10vh;
+      display: flex;
+      align-items: center;
+
+      #compte {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-    }
 
-    #bandeau {
-        display: flex;
+        .compte-interactible {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          align-items: flex-end;
 
-
-        .head {
-            height: 10vh;
+          #menuprofil {
             display: flex;
-            align-items: center;
+            flex-direction: row;
+            justify-content: flex-end;
 
-            #compte {
-                display: flex;
-                align-items: center;
-
-                .compte-interactible {
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-                    align-items: flex-end;
-
-                    #menuprofil {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-end;
-
-                        img {
-                            margin-left: 20px;
-                            height: 70%;
-                            width: 70%;
-                        }
-
-                    
-
-                    }
-
-
-
-                }
-
-                .utilisateur {
-                    height: 100%;
-                    aspect-ratio: 1;
-                    margin-left: 1rem;
-
-                    .bulle {
-                        width: 80%;
-                        height: 80%;
-                    }
-
-                }
-
+            img {
+              margin-left: 20px;
+              height: 70%;
+              width: 70%;
             }
-
-
-            #firstname {
-                font-family: $font-head;
-                color: #311D02;
-                align-self: center;
-                margin: 0;
-                margin-left: 8px;
-                font-size: 2rem;
-            }
-
-            #lg {
-                height: 90%;
-                aspect-ratio: 1;
-            }
-
-
+          }
         }
 
+        .utilisateur {
+          height: 100%;
+          aspect-ratio: 1;
+          margin-left: 1rem;
+          margin-top: 1rem;
+          .bulle {
+            width: 80%;
+            height: 80%;
+          }
+        }
+      }
+
+      #firstname {
+        font-family: $font-head;
+
+        align-self: center;
+        margin: 0;
+        margin-left: 8px;
+        font-size: 2rem;
+        a {
+          color: #311d02;
+        }
+      }
+
+      #lg {
+        height: 90%;
+        aspect-ratio: 1;
+      }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
 }

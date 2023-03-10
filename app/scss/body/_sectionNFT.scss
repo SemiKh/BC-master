@@ -11,6 +11,7 @@ section {
         font-family: 'Raleway';
         text-align: left;
         margin: 0.5rem;
+        padding-left: 2rem;
     }
 
     .presentation {
@@ -19,18 +20,52 @@ section {
         box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
         background: linear-gradient($grad-lin-s);
         margin-bottom: 2rem;
+        position: relative;
 
         img {
             height: 15rem;
-            width: 20rem;
+            width: 25rem;
             border-radius: 1rem;
             transition: transform 0.3s ease-in-out;
             margin: 1.5rem;
+            
 
             &:hover {
                 transform: scale(1.1);
                 transform-origin: scale(1.1);
             }
         }
+        .btn-dir{
+
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 80px;
+            background: linear-gradient($color-btn-direction);
+            border: 1px solid rgb(117, 15, 130);
+            position: absolute;
+            top: 35%;
+            left: 93%;
+
+
+            img{
+                transform:none;
+                height: 80%;
+                width: 80%;
+                opacity: 50%;
+                
+                
+
+                &:hover{
+                    transition: opacity 0.4s ease-in;
+                    opacity: 100%;
+                }
+            }
+
+        }
     }
+    
+    
 }
