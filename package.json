@@ -4,7 +4,7 @@
   "description": "creation d'un buisiness case",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./app/scss/main.scss ./public/css/style.css --style compressed" 
+    "sass": "sass --watch ./app/scss/main.scss ./public/css/style.css --style compressed"
   },
   "keywords": [
     "sass"
@@ -13,6 +13,9 @@
   "license": "ISC",
   "devDependencies": {
     "bootstrap-reboot": "^4.5.6",
-    "sass": "^1.58.3"
+    "sass": "^1.59.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
   }
 }

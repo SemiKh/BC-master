@@ -1,0 +1,60 @@
+.cc-search {
+    display: flex;
+    align-items: center;
+    background-color: $color-search;
+    padding: 6px;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+    margin: 0;
+    @media screen and (max-width: 600px) {   
+        margin-top: 2.3rem;
+        height: 30px;
+    }
+    .barre {
+        label {
+            display: none;
+        }
+
+        input[type="search"] {
+            flex: 1;
+            width: 500px;
+            border: none;
+            font-size: 14px;
+            background-color: $color-search;
+            outline: none;
+
+            @media screen and (max-width: 600px) {   
+                width: 100px;
+                height: 10px;
+                  
+            }
+
+            &::placeholder {
+                color: $color-placeholder;
+                padding-left: 8px;
+                @media screen and (max-width: 600px) {   
+                   font-size: 0.7rem
+                       
+                   }
+            }
+        }
+    }
+
+    button[type="submit"] {
+        border: none;
+        background-color: transparent;
+        font-size: 14px;
+        cursor: pointer;
+        
+
+        img{
+           @media screen and (max-width: 600px) {   
+            width: 1rem;
+            height: 1rem;
+        } 
+        }
+        
+    }
+
+}

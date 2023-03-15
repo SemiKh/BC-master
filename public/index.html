@@ -13,9 +13,9 @@
 
 
 <body>
-
     <header>
         <div id="bandeau">
+            <!-- TOFIX: Refaire le header avec un grid -->
             <!--  partie haut-gauche du header -->
             <div class="head">
                 <a href="index.html"><img id="lg" src="img/logo.png"></a>
@@ -23,8 +23,8 @@
                 <h1 id="firstname"><a href="index.html">CosmiCard</a></h1>
 
             </div>
-            <!-- TOFIX: Centrer le formulaire //-->
-            <form method="post" action="">
+            <!-- TOFIX: Centrer le formulaire -->
+            <form method="post" action="#" class="cc-search">
                 <div class="barre">
                     <label for="search">Search</label>
                     <input type="search" name="search" id="search" placeholder="Search">
@@ -33,11 +33,39 @@
             </form>
             <div class="head">
                 <!-- partie haut droite du header liste verticale entre compte et menuprofil -->
-
-
-                <div id="compte"> <!--  compte inline -->
+                <div id="compte">
                     <div class="compte-interactible">
-                        <p><a classe="utilisateur" href="inscrip.html">Inscription</a> / <a href="connexion.html">Connexion</a></p>
+                        <p><a href="#" data-bs-target="#exampleModal" data-bs-toggle="modal"> Inscription / Connexion</a></p>
+
+                        <!-- Modal -->
+                        <div class="modal fade text-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">User login</h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="#" method="post">
+                                            <div id="cc-user">
+                                                <label for="pseudo"><img src="img/icon/iconuser.svg" alt="profil"></label>
+                                                <input type="text" name="pseudo" id="pseudo" placeholder="USERNAME">
+                                            </div>
+                                            <div id="cc-mdp">
+                                                <label for="mdp"><img src="img/icon/iconmdp.svg" alt="mot de passe"></label>
+                                                <input type="password" name="mdp" id="mdp" placeholder="PASSWORD">
+                                            </div>
+                                            <button type="button" class="btn">Connexion</button>
+                                            
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="#">Forget password ?</a> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn back" data-bs-dismiss="modal">Retourner à l'accueil</button>
+                        </div>
 
                         <div id="menuprofil"><!--  Icones inline -->
                             <a href="collection.html"><img src="img/icon/iconecollection.svg" alt="collection"></a>
@@ -48,12 +76,17 @@
 
                     </div>
 
-                    <a class="utilisateur" href="compte.html"><img class="bulle" src="img/icon/profilutilisateur.svg"alt="profil"></a>
+                    <a class="utilisateur" href="compte.html"><img class="bulle" src="img/icon/profilutilisateur.svg"
+                            alt="profil"></a>
                 </div>
 
             </div>
         </div>
 
+
+    </header>
+
+    <main id="vitre"><!--  contenu -->
         <nav> <!-- Navigation -->
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -62,54 +95,87 @@
                 <li><a href="contact">Contacts</a></li>
             </ul>
         </nav>
-    </header>
-
-    <main id="vitre"><!--  contenu -->
-
-        <button class="accordeon">Quel est ce projet? </button>
-        <div class="panel">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi a consequatur sequi ea enim
-                cupiditate eaque quis odio doloremque nesciunt!</p>
+        <!------Accordeon---------->
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Quel est ce projet?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet. Ab neque iste ut maxime illum quo quod enim in accusantium
+                        distinctio cum soluta quam non quisquam quisquam? Ut provident voluptatem est deserunt beatae
+                        cum sapiente pariatur est nihil eius. Ut nulla velit vel minus porro qui porro expedita sit enim
+                        doloribus qui laudantium natus sit quae corporis.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Qui sommes-nous?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Qu'est-ce qu'un NFT?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Un NFT est une unité numérique qui permet de certifier l'authenticité et la propriété d'un actif
+                        numérique sur une blockchain. Cela signifie qu'il permet de dire qui est le propriétaire d'un
+                        objet numérique unique, comme une image ou une vidéo, et de s'assurer que cette copie ne peut
+                        pas être dupliquée. Il permet aux utilisateurs d'acheter, vendre et échanger ces actifs
+                        numériques.
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <button class="accordeon">Qui sommes-nous?</button>
-        <div class="panel">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi a consequatur sequi ea enim
-                cupiditate eaque quis odio doloremque nesciunt!</p>
-        </div>
-
-        <button class="accordeon">Qu'est-ce qu'un nft?</button>
-        <div class="panel">
-            <p>Un NFT est une unité numérique qui permet de certifier l'authenticité et la propriété d'un actif
-                numérique sur une blockchain. Cela signifie qu'il permet de dire qui est le propriétaire d'un objet
-                numérique unique, comme une image ou une vidéo, et de s'assurer que cette copie ne peut pas être
-                dupliquée. Il permet aux utilisateurs d'acheter, vendre et échanger ces actifs numériques.</p>
-        </div>
-
 
         <!-- Partie Tendances-->
         <section class="tendances">
             <h2 class="titre">TENDANCES</h2>
             <div class="presentation">
 
-                <div class="card">
+                <div class="boutnft">
                     <img src="img/nft/Omega_Nebula.jpg">
                     <div class="overlay"><span>description</span></div>
                 </div>
-               
-                <div class="card">
+
+                <div class="boutnft">
                     <img src="img/nft/cosmos.svg">
                     <div class="overlay"><span>description</span></div>
                 </div>
 
-                <div class="card">
-                    <img src="img/nft/cosmos2.svg"> 
+                <div class="boutnft">
+                    <img src="img/nft/cosmos2.svg">
                     <div class="overlay"><span>description</span></div>
                 </div>
 
                 <div class="btn-dir"><img src="img/icon/flechedir.svg" alt=""></div>
             </div>
-           
+
         </section>
 
         <!--Partie dernieres visites-->
@@ -117,24 +183,24 @@
             <h2 class="titre">DERNIERES VENTES</h2>
             <div class="presentation">
 
-                <div class="card">
+                <div class="boutnft">
                     <img src="img/nft/crabnebula.svg">
                     <div class="overlay"><span>description</span></div>
                 </div>
 
-                <div class="card">
+                <div class="boutnft">
                     <img src="img/nft/cosmos3.svg">
                     <div class="overlay"><span>description</span></div>
                 </div>
 
-                <div class="card">
+                <div class="boutnft">
                     <img src="img/nft/crabnebula2.svg">
                     <div class="overlay"><span>description</span></div>
                 </div>
 
                 <div class="btn-dir"><img src="img/icon/flechedir.svg" alt=""></div>
             </div>
-            
+
 
         </section>
 
@@ -144,24 +210,24 @@
             <h2 class="titre">RECEMMENT AJOUTE</h2>
             <div class="presentation">
 
-                <div class="card">
+                <div class="boutnft">
                     <img src="img/nft/Omega_Nebula.jpg">
                     <div class="overlay"><span>description</span></div>
                 </div>
 
-                <div class="card">
+                <div class="boutnft">
                     <img src="img/nft/crabnebula.svg">
                     <div class="overlay"><span>description</span></div>
                 </div>
 
-                <div class="card">
+                <div class="boutnft">
                     <img src="img/nft/cosmos2.svg">
                     <div class="overlay"><span>description</span></div>
                 </div>
 
                 <div class="btn-dir"><img src="img/icon/flechedir.svg" alt=""></div>
             </div>
-            
+
 
         </section>
     </main>
@@ -177,6 +243,10 @@
 
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

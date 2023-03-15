@@ -1,10 +1,11 @@
-@import "../../node_modules/bootstrap-reboot/index.scss"; 
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
 @import "elementP/variable";
 @import "elementP/settingsHTML";
 @import "header/navbar";
-@import "header/form";
+@import "header/search";
 @import "body/accordeon";
 @import "body/sectionNFT";
 @import "footd/footer";
 @import "header/header";
-@import "elementP/responsive"
+@import "header/overlay";

@@ -1,24 +1,36 @@
 #vitre {
-  margin-top: 3rem;
 
-  .accordeon {
-    width: 600px;
+
+  .accordion{
+    width: 600px !important;
     margin-left: auto;
     margin-right: auto;
-    display: block;
-    background-color: #181949;
+    margin-top: 1rem;
     color: #559bd8;
     cursor: pointer;
-    padding: 18px;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    line-height: 1rem;
     font-size: 1.2rem;
+    
+    @media screen and (max-width: 600px) {
+      width: 400px !important;
+      
+    }
+    .accordion-button{
+      color: #181949;
 
-    &:hover {
-      background-color: #3a0d5f;
+    }
+    
+    .accordion-item {
+      background-color: #3a0d5f !important;
+      color: white;
+      font-size: medium;
+
+      @media screen and (max-width: 600px) {
+        font-size:small;
+        
+      }
+      .accordion-button{
+      box-shadow: none;
+      }
     }
   }
 

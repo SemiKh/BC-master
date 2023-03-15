@@ -8,11 +8,14 @@ section {
         color: transparent;
         font-size: 2rem;
         background-image: linear-gradient($grad-lin-font-title);
-        font-family: 'Raleway';
+        font-family: "Raleway";
         text-align: left;
         margin: 0.5rem;
         padding-left: 2rem;
 
+        @media screen and (max-width: 600px) {
+            font-size: 1.5rem;
+        }
     }
 
     .presentation {
@@ -28,13 +31,11 @@ section {
             width: 25rem;
             border-radius: 1rem;
             margin: 1.5rem;
-            
 
             
         }
 
-        .btn-dir{
-
+        .btn-dir {
             height: 100px;
             width: 100px;
             display: flex;
@@ -45,60 +46,80 @@ section {
             border: 1px solid rgb(117, 15, 130);
             position: absolute;
             top: 35%;
-            left: 93%;
+            left: 92%;
+            z-index: 4;
+            opacity: 60%;
 
-            img{
-                transform:none;
+            &:hover {
+                transition: opacity 0.4s ease-in;
+                opacity: 100%;
+            }
+
+            @media screen and (max-width: 600px) {
+                left: 80%;
+                height: 90px;
+                width: 90px;
+            }
+
+
+            img {
+                transform: none;
                 height: 80%;
                 width: 80%;
                 opacity: 50%;
 
-                &:hover{
+                &:hover {
                     transition: opacity 0.4s ease-in;
                     opacity: 100%;
                 }
-
             }
-
         }
 
-        .card {
-
+        .boutnft {
             cursor: pointer;
             position: relative;
-          
+
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+
+            &:first-child {
+
+                @media screen and (max-width: 600px) {
+                    display: block !important;
+                }
+            }
+
             .overlay {
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              box-sizing: border-box;
-              background: rgba(188, 183, 183, 0.388);
-              width: 89.4%;
-              height: 0;
-              text-align: center;
-              line-height: 256px;
-              transition: .25s ease-in;
-              z-index: -1;
-              border-radius: 1rem;
-              margin: 1.5rem;
-            
-          
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                box-sizing: border-box;
+                background: rgba(188, 183, 183, 0.388);
+                width: 89.4%;
+                height: 0;
+                text-align: center;
+                line-height: 256px;
+                transition: 0.25s ease-in;
+                z-index: -1;
+                border-radius: 1rem;
+                margin: 1.5rem;
+
                 span {
-                    padding: .5rem;
+                    padding: 0.5rem;
                     display: none;
                 }
-          
-            }
-          
-            &:hover .overlay, &:hover span {
-              height: 83.4%;
-              z-index: 1;
-              display:block;
+
+                
             }
 
+            &:hover .overlay,
+            &:hover span {
+                height: 83.4%;
+                z-index: 1;
+                display: block;
+            }
         }
-
     }
-    
 }
