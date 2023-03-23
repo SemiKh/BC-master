@@ -14,3 +14,7 @@ body:link, a, a:hover {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     color:black;
 }
+
+.gradBody2{
+    background: linear-gradient($grad-lin-b2)!important;
+}

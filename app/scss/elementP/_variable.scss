@@ -6,9 +6,14 @@ $font-main: "Raleway", sans-serif;
 $font-body: "Lato", sans-serif;
 
 /* color */
-$grad-lin-hf: 90.4deg, #eba647 -23.21%, #8c67b5 103.54%, #5442f5 110.19%;
+$grad-lin-hd: 90.4deg, #1EC3CD -23.21%, #8C67B5 46.97%, #5442F5 110.19%;
+$grad-lin-ftr: 90.4deg, #1EC3CD -23.21%, #8C67B5 21.26%, #5442F5 110.19% ;
+$grad-lin-hd2 : 90.4deg, #5442F5 -5.14%, #FD2828 110.19%;
+$grad-lin-ftr2 :90.4deg, #5442F5 -3.06%, #FD2828 107.16%;
 $grad-lin-b: 108.78deg, #070042 -23.28%, #390000 136.9%;
+$grad-lin-b2: 108.78deg, #390000 3.42%, #070042 88.51%;
 $grad-lin-s: 92.64deg, rgba(255, 255, 255, 0.05) 30.22%, rgba(151, 71, 255, 0.3);
+$grad-lin-s2: 92.64deg, rgba(255, 255, 255, 0.05) 30.22%, rgba(71, 78, 255, 0.3) 99.44%;
 $grad-lin-font-title: 90.61deg, #d99a5c -36.72%, #8f69b1 133.41%;
 $color-foot-copyright: #662b00;
 $color-foot-link: #FDE9CE; 

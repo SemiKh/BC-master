@@ -1,5 +1,5 @@
 header {
-  background: linear-gradient($grad-lin-hf);
+  background: linear-gradient($grad-lin-hd);
   box-shadow: 0px 4px 4px $color-shadow;
   list-style: none;
   height: 6rem;
@@ -111,4 +111,8 @@ header {
       }
     }
   }
+}
+
+.gradh2{
+  background: linear-gradient($grad-lin-hd2)!important;
 }
