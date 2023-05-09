@@ -1,0 +1,53 @@
+#presentation-nft {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+
+
+    #cible {
+        img {
+            width: 350px;
+            height: 300px;
+            border-radius: 4px;
+        }
+    }
+
+    #vente {
+
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        font-family: var($font-main);
+
+        table {
+            width: 250px;
+
+            tbody {
+                td {
+                    padding-bottom: 15px;
+                }
+
+                :first-child {
+                    color: #350066;
+                }
+            }
+
+            tr:nth-child(3),
+            :nth-child(4) {
+                text-align: center;
+
+                input {
+                    width: 220px;
+
+                }
+            }
+
+        }
+
+
+    }
+
+    #detail {
+        border: #FFFFFF 1px solid;
+        border-radius: 4px;
+    }
+}

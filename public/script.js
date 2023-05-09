@@ -1,3 +1,4 @@
+'use strict';
 let button = document.querySelector('.palette');
 
 function changeBG() {
@@ -22,4 +23,6 @@ function changeBG() {
 }
 
 
-  button.addEventListener("click", changeBG);
+button.addEventListener("click", changeBG);
+
+
