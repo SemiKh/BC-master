@@ -1,10 +1,13 @@
 #presentation-nft {
     margin: 30px;
     display: flex;
-
+    font-size: larger;
+    font-family: 'Raleway';
+    width: 100%;
+    height: auto;
     #cible {
-        width: 30rem;
-        height: 20rem;
+        width: 30%;
+        height: auto;
 
         img {
             width: 100%;
@@ -14,12 +17,11 @@
     }
 
     #sum {
-
-        width: 100%;
-
+        width: 55rem;
         #titreNft {
             display: block;
             margin: 0;
+            margin-bottom: 3rem;
             color: #FDE9CE;
             margin-left: 2rem;
         }
@@ -27,20 +29,22 @@
 
         #trans {
             display: flex;
-            justify-content: space-evenly;
-
+            height: auto;
+            justify-content: space-around;
+            width: auto;
             #vente {
 
                 background-color: #FFFFFF;
                 border-radius: 4px;
                 font-family: var($font-main);
-
+                height: 100%;
                 #valueNft {
                     width: 250px;
 
                     tbody {
                         tr:first {
                             color: #350066;
+                            font-size: 28px;
                         }
                         td {
                             padding-bottom: 15px;
@@ -70,7 +74,7 @@
             }
 
             #detail {
-                width: 35%;
+                width: 60%;
                 border: #FFFFFF 1px solid;
                 border-radius: 5px;
                 overflow: hidden;
@@ -90,14 +94,7 @@
                         text-align: right;
                     }
                 }
-
             }
         }
-
-
     }
-
-
-
-
 }

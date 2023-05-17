@@ -1,103 +1,17 @@
 <html>
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Accueil</title>
-</head>
-
+<html lang="fr">
+<?php 
+    $pageTitle = 'Accueil';
+    include 'include/head.php';
+?>
 
 <body>
-    <header>
-        <div id="bandeau">
-            <!-- TOFIX: Refaire le header avec un grid -->
-            <!--  partie haut-gauche du header -->
-            <div class="head">
-                <a href="index.html"><img id="lg" src="img/logo.png"></a>
-
-                <h1 id="firstname"><a href="index.html">CosmiCard</a></h1>
-
-            </div>
-            <!-- TOFIX: Centrer le formulaire -->
-            <form method="post" action="#" class="cc-search">
-                <div class="barre">
-                    <label for="search">Search</label>
-                    <input type="search" name="search" id="search" placeholder="Search">
-                </div>
-                <button type="submit" id="search" class="btn"><img src="img/icon/search.svg" alt=""></button>
-            </form>
-            <div class="head">
-                <!-- partie haut droite du header liste verticale entre compte et menuprofil -->
-                <div id="compte">
-                    <div class="compte-interactible">
-                        <p><a href="#" data-bs-target="#exampleModal" data-bs-toggle="modal"> Inscription / Connexion</a></p>
-
-                        <!-- Modal -->
-                        <div class="modal fade text-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">User login</h1>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="#" method="post">
-                                            <div id="cc-user">
-                                                <label for="pseudo"><img src="img/icon/iconuser.svg" alt="profil"></label>
-                                                <input type="text" name="pseudo" id="pseudo" placeholder="USERNAME">
-                                            </div>
-                                            <div id="cc-mdp">
-                                                <label for="mdp"><img src="img/icon/iconmdp.svg" alt="mot de passe"></label>
-                                                <input type="password" name="mdp" id="mdp" placeholder="PASSWORD">
-                                            </div>
-                                            <button type="button" class="btn">Connexion</button>
-                                            
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a href="#">Forget password ?</a> 
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" class="btn back" data-bs-dismiss="modal">Retourner à l'accueil</button>
-                        </div>
-
-                        <div id="menuprofil"><!--  Icones inline -->
-                            <a href="collection.html"><img src="img/icon/iconecollection.svg" alt="collection"></a>
-                            <a href="market.html"><img src="img/icon/iconmarket.svg" alt="market"></a>
-                            <a href="wallet.html"><img src="img/icon/iconwallet.svg" alt="wallet"></a>
-                            <a href="message.html"><img src="img/icon/iconmessage.svg" alt="message"></a>
-                        </div>
-
-                    </div>
-
-                    <a class="utilisateur" href="compte.html"><img class="bulle" src="img/icon/profilutilisateur.svg"
-                            alt="profil"></a>
-                </div>
-
-            </div>
-        </div>
-
-
-    </header>
+    <?php include 'include/header.php';?>
 
     <main id="vitre"><!--  contenu -->
-        <div class="hdp">
-            <nav> <!-- Navigation -->
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="librairie.html">Librairie</a></li>
-                    <li><a href="about.html">A propos</a></li>
-                    <li><a href="contact">Contacts</a></li>
-                </ul>
-            </nav>
-            <button class="palette"><img src="img/icon/iconpallette.svg" alt=""></button>
-        </div>
+        <?php include 'include/nav.php';?>
+
         <!------Accordeon---------->
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -131,7 +45,7 @@
                         collapse plugin adds the appropriate classes that we use to style each element. These classes
                         control the overall appearance, as well as the showing and hiding via CSS transitions. You can
                         modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        that just about any php can go within the <code>.accordion-body</code>, though the transition
                         does limit overflow.
                     </div>
                 </div>
@@ -208,7 +122,6 @@
         </section>
 
         <!--Partie recemment ajouté-->
-
         <section class="recemmentajoute">
             <h2 class="titre">RECEMMENT AJOUTE</h2>
             <div class="presentation">
@@ -235,22 +148,12 @@
         </section>
     </main>
 
-    <footer>
-
-        <ul class="detail">
-            <li>© Copyright 2023 La Collection de Taty, Fr, All rights reserved.</li>
-            <li><a href="about.html">A propos</a></li>
-            <li><a href="condition.html">Condition d'utilisation</a></li>
-            <li><a href="Protection.html">Déclaration de protection des données</a></li>
-        </ul>
-
-        </div>
-    </footer>
+   <?php include 'include/footer.php' ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

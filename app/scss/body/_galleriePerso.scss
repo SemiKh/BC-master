@@ -1,0 +1,64 @@
+#collectionPerso {
+    width: 90%;
+    overflow-x: auto;
+    
+    scrollbar-color: #41206d #8F69B1;
+    scrollbar-width:auto;
+    scroll-behavior: smooth;
+    margin-left: auto;
+    margin-right: auto;
+    
+    ul {
+        display: flex;
+        width: 300px;
+        li{
+            margin:10px;
+        }
+    }
+}
+#tabBilan{
+    background-color:#FFE0B6 ;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: 20px;
+    width: 250px;
+    #bilan{
+        width: 100%;
+        td{
+            color:#350066;
+            border: 1px solid rgba(151, 71, 255, 0.3);;
+        }
+        tr:nth-child(2) td:last-child{
+            color: #660000;
+        }
+
+        td:last-child{
+            text-align: center;
+        }
+    }
+
+}
+
+#courEth{
+    height: 400px;
+    width: 100%;
+    margin-bottom: 1%;
+    h2{
+        margin-right: auto;
+        margin-left: 30px;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 2rem;
+        background-image: linear-gradient($grad-lin-font-title);
+        font-family: "Raleway";
+    }
+    #ethereumChart{
+        width: 90%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4%;
+        background-color:rgb(247, 211, 211);
+    }
+}
