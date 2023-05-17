@@ -10,8 +10,10 @@ include 'include/head.php';
     <?php include 'include/header.php' ?>
     <main id="vitre">
         <?php include 'include/nav.php' ?>
+        <div id="reglage">
+            <img src="img/icon/reglage.svg" alt="">
+        </div>
         <section id="collectionPerso">
-
             <ul>
                 <li>
                     <div class="card" style="width: 18rem;">
