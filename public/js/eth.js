@@ -1,3 +1,4 @@
+'use strict';
 fetch(
   "https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=eur&days=30&interval=daily"
 )

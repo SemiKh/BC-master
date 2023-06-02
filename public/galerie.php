@@ -1,14 +1,15 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-    $pageTitle = 'Gallerie';
-    include 'include/head.php';
+<?php
+$pageTitle = 'Gallerie';
+include 'include/head.php';
 ?>
 
 <body class="galb">
     <?php include 'include/header.php' ?>
 
-    <main  id="vitre">
+    <main id="vitre">
         <?php include 'include/nav.php' ?>
         <div class="filtre">
             <div class="filters-container">
@@ -33,25 +34,25 @@
                     <label for="devise">Devise:</label>
                     <select id="devise" name="devise">
                         <option value="eth">ETH</option>
-                        <option value="euro">€</option> 
+                        <option value="euro">€</option>
                     </select>
-                        <input type="range" id="valeur" name="valeur" min="0" max="500">
-                        <input type="text" id="unite" placeholder="...">
-                        <div id="btn-radio-lim">
-                            <input type="radio" name="lim" id="lim" value="min">
-                                <label for="min">Min</label>
-                            
+                    <input type="range" id="valeur" name="valeur" min="0" max="500">
+                    <input type="text" id="unite" placeholder="...">
+                    <div id="btn-radio-lim">
+                        <input type="radio" name="lim" id="lim" value="min">
+                        <label for="min">Min</label>
 
-                            <input type="radio" name="lim" id="max" value="max">
-                                <label for="max">Max</label>
-                            
 
-                        </div>
-                   
+                        <input type="radio" name="lim" id="max" value="max">
+                        <label for="max">Max</label>
+
+
+                    </div>
+
                 </div>
                 <input type="button" class="btn btn-outline-info " value="recherche">
-               
-            </div> 
+
+            </div>
             <div id="border"></div>
 
         </div>
@@ -64,7 +65,7 @@
     </main>
 
 
-    <?php include 'include/footer.php'?>
+    <?php include 'include/footer.php' ?>
 
     <script src="js/gal.js"></script>
 

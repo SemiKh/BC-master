@@ -39,7 +39,7 @@
 
                 </div>
 
-                <a class="utilisateur" href="compte.php"><img class="bulle" src="img/icon/profilutilisateur.svg"
+                <a class="utilisateur" href="galerieUtilisateur.php"><img class="bulle" src="img/icon/profilutilisateur.svg"
                         alt="profil"></a>
             </div>
 

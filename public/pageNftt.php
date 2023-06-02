@@ -1,8 +1,9 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="fr">
-<?php 
-    $pageTitle = 'NFT';
-    include 'include/head.php';
+<?php
+$pageTitle = 'NFT';
+include 'include/head.php';
 ?>
 
 <body>
@@ -44,10 +45,10 @@
 
                     </div>
                     <div id="detail">
-                              <div>Détails</div>
-                        
+                        <div>Détails</div>
+
                         <table>
-                            
+
                             <tbody>
                                 <tr>
                                     <td>Adresse du contrat</td>
@@ -95,7 +96,7 @@
         </div>
     </main>
 
-    <?php include 'include/footer.php'?>
+    <?php include 'include/footer.php' ?>
 </body>
 
 </html>

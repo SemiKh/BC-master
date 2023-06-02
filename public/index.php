@@ -1,28 +1,26 @@
-<html>
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="fr">
-<?php 
-    $pageTitle = 'Accueil';
-    include 'include/head.php';
+<?php
+$pageTitle = 'Accueil';
+include 'include/head.php';
 ?>
 
 <body>
-    <?php include 'include/header.php';?>
+    <?php include 'include/header.php'; ?>
 
     <main id="vitre"><!--  contenu -->
-        <?php include 'include/nav.php';?>
+        <?php include 'include/nav.php'; ?>
 
         <!------Accordeon---------->
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Quel est ce projet?
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         Lorem ipsum dolor sit amet. Ab neque iste ut maxime illum quo quod enim in accusantium
                         distinctio cum soluta quam non quisquam quisquam? Ut provident voluptatem est deserunt beatae
@@ -33,13 +31,11 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Qui sommes-nous?
                     </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
                         collapse plugin adds the appropriate classes that we use to style each element. These classes
@@ -52,13 +48,11 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Qu'est-ce qu'un NFT?
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         Un NFT est une unité numérique qui permet de certifier l'authenticité et la propriété d'un actif
                         numérique sur une blockchain. Cela signifie qu'il permet de dire qui est le propriétaire d'un
@@ -148,11 +142,9 @@
         </section>
     </main>
 
-   <?php include 'include/footer.php' ?>
+    <?php include 'include/footer.php' ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 

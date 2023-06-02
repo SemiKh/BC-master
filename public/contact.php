@@ -1,12 +1,15 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="fr">
-<?php include 'include/head.php' ?>
+<?php
+$pageTitle = 'Contact';
+include 'include/head.php' ?>
 
 <body>
     <?php include 'include/header.php' ?>
     <main id=vitre>
-        <?php include 'include/nav.php' ;
-        
+        <?php include 'include/nav.php';
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Récupère les valeurs saisies par l'utilisateur
             $nom = htmlentities($_POST["nom"]);
@@ -43,20 +46,21 @@
             }
         }
         ?>
+        <div id="envoie"><!-- Formulaire HTML -->
+            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom" id="nom" value="<?php echo isset($nom) ? $nom : ''; ?>">
+                <br><br>
+                <label for="email">Email :</label>
+                <input type="email" name="email" id="email" value="<?php echo isset($email) ? $email : ''; ?>">
+                <br><br>
+                <label for="message">Message :</label>
+                <textarea name="message" id="message"><?php echo isset($message) ? $message : ''; ?></textarea>
+                <br><br>
+                <input type="submit" name="submit" value="Envoyer">
+            </form>
+        </div>
 
-        <!-- Formulaire HTML -->
-        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <label for="nom">Nom :</label>
-            <input type="text" name="nom" id="nom" value="<?php echo isset($nom) ? $nom : ''; ?>">
-            <br><br>
-            <label for="email">Email :</label>
-            <input type="email" name="email" id="email" value="<?php echo isset($email) ? $email : ''; ?>">
-            <br><br>
-            <label for="message">Message :</label>
-            <textarea name="message" id="message"><?php echo isset($message) ? $message : ''; ?></textarea>
-            <br><br>
-            <input type="submit" name="submit" value="Envoyer">
-        </form>
 
         <!-- Affichage des messages d'erreur ou de succès -->
         <?php
